@@ -18,30 +18,40 @@ sudo apt install git-all
 ```bash
 sudo adduser newuser
 ```
+5. Add user to sudoers:
+```bash
+usermod -a -G examplegroup exampleusername
+```
 
-5. Change to the new user: https://unix.stackexchange.com/questions/156962/how-to-change-to-normal-user-in-the-command-line-when-logged-in-as-the-root-user
+6. Change to the new user: https://unix.stackexchange.com/questions/156962/how-to-change-to-normal-user-in-the-command-line-when-logged-in-as-the-root-user
 ```bash
 su - username
 ```
 
-6. Generate SSH key for the user and add it to Github: https://www.atlassian.com/git/tutorials/git-ssh
+7. Generate SSH key for the user and add it to Github: https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices
 ```bash
-ssh-keygen
+ssh-keygen -t ed25519 -a 100
 ```
 
-7. Add permissions to create folders to the user: https://support.circleci.com/hc/en-us/articles/360003649774-Permission-Denied-When-Creating-Directory-or-Writing-a-File, https://askubuntu.com/questions/487527/give-specific-user-permission-to-write-to-a-folder-using-w-notation, https://stackoverflow.com/questions/20276895/could-not-create-work-tree-dir-example-com-permission-denied
+8. Add key to ssh agent: https://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent
+```bash
+eval `ssh-agent -s`
+ssh-add
+```
+
+9. Add permissions to create folders to the user: https://support.circleci.com/hc/en-us/articles/360003649774-Permission-Denied-When-Creating-Directory-or-Writing-a-File, https://askubuntu.com/questions/487527/give-specific-user-permission-to-write-to-a-folder-using-w-notation, https://stackoverflow.com/questions/20276895/could-not-create-work-tree-dir-example-com-permission-denied
 ```bash
 sudo chown -R $USER /var/www
 ```
 
-8. Clone the repo and change the folder name: https://graphite.dev/guides/git-rename-repo-while-cloning
+11. Clone the repo and change the folder name: https://graphite.dev/guides/git-rename-repo-while-cloning
 ```bash
 git clone <REPOSITORY_URL> <NEW_DIRECTORY_NAME>
 ```
 
 
-9. Create servers folders: https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
-10. Config Nginx to work with domains ans subdomains: https://www.digitalocean.com/community/questions/how-to-setup-nginx-with-subdomain-only
+12. Create servers folders: https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
+13. Config Nginx to work with domains ans subdomains: https://www.digitalocean.com/community/questions/how-to-setup-nginx-with-subdomain-only
 
 
 ## Register DNS record on Namecheap
