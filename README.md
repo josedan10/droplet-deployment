@@ -1,5 +1,8 @@
 # droplet-deployment
 
+## Requirements:
+Node: https://medium.com/@imvinojanv/how-to-install-node-js-and-npm-using-node-version-manager-nvm-143165b16ce1
+
 ## Clone repository into DO droplet
 
 1. Create the droplet on Digital Ocean: https://docs.digitalocean.com/products/droplets/how-to/create/
@@ -49,9 +52,16 @@ sudo chown -R $USER /var/www
 git clone <REPOSITORY_URL> <NEW_DIRECTORY_NAME>
 ```
 
+12. Add user to docker group: https://stackoverflow.com/questions/51342810/how-to-fix-dial-unix-var-run-docker-sock-connect-permission-denied-when-gro
+```bash
+sudo usermod -aG docker $USER
+sudo reboot
+```
 
-12. Create servers folders: https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
-13. Config Nginx to work with domains ans subdomains: https://www.digitalocean.com/community/questions/how-to-setup-nginx-with-subdomain-only
+13. Create servers folders: https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
+
+14. Config Nginx to work with domains ans subdomains: https://www.digitalocean.com/community/questions/how-to-setup-nginx-with-subdomain-only,
+https://www.oneworldcoders.com/apprentice-journals/4qmelzy08o0fn4jbcxipekxpd6sufk
 
 
 ## Register DNS record on Namecheap
