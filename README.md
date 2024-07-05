@@ -66,3 +66,6 @@ https://www.oneworldcoders.com/apprentice-journals/4qmelzy08o0fn4jbcxipekxpd6suf
 
 ## Register DNS record on Namecheap
 https://www.namecheap.com/support/knowledgebase/article.aspx/10375/2208/how-do-i-link-a-domain-to-my-digitalocean-account/
+
+## Toubleshooting
+https://stackoverflow.com/questions/53230823/fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javas
